@@ -1,0 +1,19 @@
+Validation — 2026-11-09
+Upstream: 48030717dc0d4898a195a713fb048bf597fc5b54 (1.21.11 branch)
+Java: Temurin 21.0.13+9. Gradle 9.2.0. Fabric Loom 1.14.10.
+BUILD SUCCESSFUL in 4m 29s; 7 tasks executed.
+Java compilation, launcher compilation, remapJar and validateAccessWidener completed.
+No test sources exist: test was NO-SOURCE, not a passing runtime test suite.
+Resource JSON, theme/fallback selection, icon and diff whitespace checks passed.
+Original LICENSE unchanged. Packaged JAR ZIP integrity and metadata verified:
+Minecraft 1.21.11, Fabric Loader >=0.18.2, Java >=21.
+
+Warnings: unknown enum Level.FULL (missing optional ReflectionSupport annotation).
+Remapper could not map onEntityCollision/method_9548 on CobwebBlock and SweetBerryBushBlock.
+Build succeeded despite warnings; related behavior remains runtime-unverified.
+
+Not performed: Minecraft launch, mixin application, GUI inspection, gameplay or addon tests.
+Next check: launch Fabric 1.21.11 with this JAR, inspect latest.log and verify GUI,
+chat branding, settings persistence, cobweb and berry-bush behavior.
+Initial build stopped during connection waits; retry succeeded using:
+./gradlew.bat build --no-daemon --info -Dorg.gradle.internal.http.connectionTimeout=10000 -Dorg.gradle.internal.http.socketTimeout=15000
